@@ -102,9 +102,17 @@ b {
     grid-template-columns: 12rem auto 23rem;
 }
 
-
+.sidebar-con{
+    display: flex;
+}
 aside {
     height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    width: 170px;
+    
 }
 
 aside .toggle {
@@ -112,6 +120,7 @@ aside .toggle {
     align-items: center;
     justify-content: space-between;
     margin-top: 1.4rem;
+    width: 100px;
 }
 
 aside .toggle .logo {
@@ -195,3 +204,50 @@ aside .sidebar a:hover span {
     margin-left: 0.6rem;
 }
 
+
+
+main{
+    margin-top: 1.4rem;
+    overflow-y: auto;
+}
+
+main .Telefon-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.6rem;
+    
+}
+
+main .Telefon-container {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+main .fota-telefonu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+main .fota-telefonu img {
+    width: 20rem;
+    height: 40rem;
+}
+
+.Telefon-container button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .Telefon-container .button-plus {background-color: var(--color-success);} /* Green */
+  .Telefon-container .button-minus {background-color: var(--color-warning);} /* Blue */

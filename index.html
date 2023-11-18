@@ -13,62 +13,118 @@
 </head>
 
 <body>
-    <!-- Sidebar Section -->
-    <div class="contaier">
-        <aside>
-            <div class="toggle">
-                <div class="logo">
-                    <img src="images/logo.png">
-                    <h2>Telefoniki</h2>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <div class="sidebar-con">    
+            <aside>
+                <div class="toggle">
+                    <div class="logo">
+                        <img src="images/logo.png">
+                        <h2>Telefoniki</h2>
+                    </div>
+                    <div class="close">
+                        <span class="material-icons-sharp">
+                            close
+                        </span>
+                    </div>
                 </div>
-                <div class="close">
-                    <span class="material-icons-sharp">
-                        close
-                    </span>
+                <div class="sidebar">
+                    <a href="#" class="active" id="mainPageOption">
+                        <span class="material-icons-sharp">
+                            shopping_cart
+                        </span>
+                        <h3>Smartfony</h3>
+                    </a>
+                    <a href="#" id="myProfileOption">
+                        <span class="material-icons-sharp">
+                            account_circle
+                        </span>
+                        <h3>Moje konto</h3>
+                    </a>
+                    <a href="#" id="supportPageOption">
+                        <span class="material-icons-sharp">
+                            face
+                        </span>
+                        <h3>Wsparcie</h3>
+                    </a>
+                    <a href="#" id="aboutPageOption">
+                        <span class="material-icons-sharp">
+                            article
+                        </span>
+                        <h3>O nas</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">
+                            login
+                        </span>
+                        <h3>Wyloguj</h3>
+                    </a>
                 </div>
-            </div>
-            <div class="sidebar">
-                <a href="#" class="active" id="mainPageOption">
-                    <span class="material-icons-sharp">
-                        shopping_cart
-                    </span>
-                    <h3>Smartfony</h3>
-                </a>
-                <a href="#" id="myProfileOption">
-                    <span class="material-icons-sharp">
-                        account_circle
-                    </span>
-                    <h3>Moje konto</h3>
-                </a>
-                <a href="#" id="supportPageOption">
-                    <span class="material-icons-sharp">
-                        face
-                    </span>
-                    <h3>Wsparcie</h3>
-                </a>
-                <a href="#" id="aboutPageOption">
-                    <span class="material-icons-sharp">
-                        article
-                    </span>
-                    <h3>O nas</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        login
-                    </span>
-                    <h3>Wyloguj</h3>
-                </a>
-            </div>
 
 
-        </aside>
-        <!--End of Sidebar-->
+            </aside>
+            <!--End of Sidebar-->
+        </div>
         <!-- Main Content-->
         <main>
-
-
+            <h1>Wybierz telefon dla siebie!</h1>
+            <div class="Telefon-container">
+                <div class="fota-telefonu">
+                    <img src="images/tel1.png">
+                </div>
+                <div class="info-telefon">
+                    <h2>SamochoYoto 3</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis erat purus. Proin vehicula quam massa, vel rutrum libero malesuada vel. Nulla dolor sem, finibus eu ullamcorper et, viverra vel arcu. Sed vel imperdiet ante. Quisque sed urna non urna dapibus pretium in a libero. Cras lacus nulla, efficitur vitae cursus ac, aliquam lobortis tortor. Pellentesque laoreet accumsan risus eget maximus. Maecenas hendrerit mi sed nisi lobortis accumsan vitae sed metus. Morbi faucibus porttitor nisi, eget elementum ante. Aliquam erat volutpat. Aliquam finibus enim dolor, ut ornare sapien viverra vel. Aliquam nec urna at augue posuere maximus ut in enim. Sed egestas neque nec pellentesque ornare. Ut ut faucibus arcu. 
+                </div>
+                <div class="button-container">
+                    <button class="button-minus">-</button>
+                    <button class="button-plus">+</button>
+                </div>
+            </div>
+            <div class="Telefon-container">
+                <div class="fota-telefonu">
+                    <img src="images/tel1.png">
+                </div>
+                <div class="info-telefon">
+                    <h2>SamochoYoto 3</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis erat purus. Proin vehicula quam massa, vel rutrum libero malesuada vel. Nulla dolor sem, finibus eu ullamcorper et, viverra vel arcu. Sed vel imperdiet ante. Quisque sed urna non urna dapibus pretium in a libero. Cras lacus nulla, efficitur vitae cursus ac, aliquam lobortis tortor. Pellentesque laoreet accumsan risus eget maximus. Maecenas hendrerit mi sed nisi lobortis accumsan vitae sed metus. Morbi faucibus porttitor nisi, eget elementum ante. Aliquam erat volutpat. Aliquam finibus enim dolor, ut ornare sapien viverra vel. Aliquam nec urna at augue posuere maximus ut in enim. Sed egestas neque nec pellentesque ornare. Ut ut faucibus arcu. 
+                </div>
+                <div class="button-container">
+                    <button class="button-minus">-</button>
+                    <button class="button-plus">+</button>
+                </div>
+            </div>
         </main>
-    </div>
+
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Reza</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+
+        
 
     <script src="script.js"></script>
 </body>
