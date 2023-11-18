@@ -1,8 +1,20 @@
+const sideMenu = document.querySelector('aside');
 const darkMode = document.querySelector('.dark-mode');
+const menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-btn');
 
 function redirectToHomePage() {
     window.location.href = "index.html";
 }
+
+menuBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'none';
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     var logoElements = document.getElementsByClassName("logo");
