@@ -1,3 +1,5 @@
+const darkMode = document.querySelector('.dark-mode');
+
 function redirectToHomePage() {
     window.location.href = "index.html";
 }
@@ -31,4 +33,10 @@ var mojeKontoLink = document.getElementById('mainPageOption');
         event.preventDefault();
         window.location.href = 'index.html';
     });    
+    
+    darkMode.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode-variables');
+        darkMode.querySelector('span:nth-child(1)').classList.toggle('active');
+        darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
+    })
     
