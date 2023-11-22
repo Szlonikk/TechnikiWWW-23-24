@@ -15,6 +15,24 @@ closeBtn.addEventListener('click', () => {
     sideMenu.style.display = 'none';
 });
 
+const checkScreenWidth = () => {
+    if (window.innerWidth > 1000) {
+        sideMenu.style.display = 'block'; // lub inny styl, który ma być ustawiony
+    } else {
+        sideMenu.style.display = 'none';
+    }
+};
+
+// Wywołaj funkcję, aby sprawdzić szerokość ekranu na początku
+checkScreenWidth();
+
+// Dodaj nasłuchiwanie na zdarzenie zmiany szerokości ekranu
+window.addEventListener('resize', checkScreenWidth);
+
+closeBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'none';
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     var logoElements = document.getElementsByClassName("logo");
