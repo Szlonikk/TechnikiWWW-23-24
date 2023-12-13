@@ -7,67 +7,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style_mk.css">
     <title>Telefoniki.pl</title>
 
 </head>
 
 <body>
-    <!-- Sidebar Section -->
-    <div class="container">
-        <aside>
-            <div class="toggle">
-                <div class="logo">
-                    <img src="images/logo.png">
-                    <h2>Telefoniki</h2>
+   <div class="container">
+        <!-- Sidebar Section -->
+        <div class="sidebar-con">    
+            <aside>
+                <div class="toggle">
+                    <div class="logo" >
+                        <img src="images/logo.png">
+                        <h2>Telefoniki</h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close
+                        </span>
+                    </div>
                 </div>
-                <div class="close" id="close-btn">
-                    <span class="material-icons-sharp">
-                        close
-                    </span>
+                <div class="sidebar">
+                    <a href="#" id="mainPageOption">
+                        <span class="material-icons-sharp">
+                            shopping_cart
+                        </span>
+                        <h3>Smartfony</h3>
+                    </a>
+                    <a href="#" class="active" id="myProfileOption">
+                        <span class="material-icons-sharp">
+                            account_circle
+                        </span>
+                        <h3>Moje konto</h3>
+                    </a>
+                    <a href="#" id="supportPageOption">
+                        <span class="material-icons-sharp">
+                            face
+                        </span>
+                        <h3>Wsparcie</h3>
+                    </a>
+                    <a href="#" id="aboutPageOption">
+                        <span class="material-icons-sharp">
+                            article
+                        </span>
+                        <h3>O nas</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">
+                            login
+                        </span>
+                        <h3>Wyloguj</h3>
+                    </a>
                 </div>
-            </div>
-            <div class="sidebar">
-                <a href="#" id="mainPageOption">
-                    <span class="material-icons-sharp">
-                        shopping_cart
-                    </span>
-                    <h3>Smartfony</h3>
-                </a>
-                <a href="#" id="myProfileOption" class="active" >
-                    <span class="material-icons-sharp">
-                        account_circle
-                    </span>
-                    <h3>Moje konto</h3>
-                </a>
-                <a href="#" id="supportPageOption">
-                    <span class="material-icons-sharp">
-                        face
-                    </span>
-                    <h3>Wsparcie</h3>
-                </a>
-                <a href="#" id="aboutPageOption">
-                    <span class="material-icons-sharp">
-                        article
-                    </span>
-                    <h3>O nas</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        login
-                    </span>
-                    <h3>Wyloguj</h3>
-                </a>
-            </div>
 
 
-        </aside>
+            </aside>
+            <!--End of Sidebar-->
+        </div>
         <!--End of Sidebar-->
         <!-- Main Content-->
         <main>
-
-
+            <div class="avatar-section">
+                <div class="avatar-hello">
+                    <p>Witaj, możesz tutaj podać informacje o sobie!</p>
+                </div>
+                <div class="avatar-container">
+                    <img src="images/profile-1.jpg" alt="Avatar">
+                </div>
+            </div>
+            <div class="input-section">
+                <input type="text" placeholder="Imie">
+                <input type="text" placeholder="Nazwisko">
+                <input type="email" placeholder="Email">
+            </div>
         </main>
+        
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hej, <b>Telefoniarz132</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>>
     </div>
 
     <script src="script.js"></script>
