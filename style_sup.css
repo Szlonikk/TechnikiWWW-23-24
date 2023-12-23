@@ -1,35 +1,50 @@
-/* Dodaj te style do pliku style.css */
+/* Resetowanie marginesów i paddingów dla wszystkich elementów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Styl dla głównego kontenera */
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /* Ustawia główny kontener na całą wysokość widoku */
 }
 
-.gif {
-    max-width: 100%;
-    height: auto;
-}
-
+/* Styl dla kontenera formularza */
 .form-container {
-    margin-left: 20px;
+    margin-top: 20px;
+    /* Dodałem margines na górę, aby oddzielić formularz od gif'a */
 }
 
-form {
+.img {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    flex-direction: column;
+}
+
+/* Styl dla formularza */
+#support-form {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-label {
-    margin-bottom: 5px;
-}
-
-input,
+/* Styl dla pól tekstowych */
+input[type="text"],
 textarea {
-    margin-bottom: 10px;
+    width: 100%;
     padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    color: var(--color-dark);
+    background-color: var(--color-light);
 }
 
 .send-btn {
@@ -40,6 +55,7 @@ textarea {
     cursor: pointer;
 }
 
+/* Dodałem prosty hover na przycisku */
 .send-btn:hover {
     background-color: #45a049;
 }

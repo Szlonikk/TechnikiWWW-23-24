@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_sup.css">
 
     <title>Telefoniki.pl</title>
 
@@ -15,10 +16,10 @@
 <body>
     <div class="container">
         <!-- Sidebar Section -->
-        <div class="sidebar-con">    
+        <div class="sidebar-con">
             <aside>
                 <div class="toggle">
-                    <div class="logo" >
+                    <div class="logo">
                         <img src="images/logo.png">
                         <h2>Telefoniki</h2>
                     </div>
@@ -68,26 +69,20 @@
         <!-- Main Content-->
         <main>
             <div class="content">
-                <!-- Gif -->
-                <p>Napisz do nas! </p>
-                <p>Nie wahaj się</p>
+
+                <h1>Napisz do nas! </h1>
+                <h2>Nie wahaj się</h2>
                 <img src="images/support.gif" alt="Gif" class="gif">
-        
+
                 <!-- Formularz -->
                 <div class="form-container">
                     <form action="#" method="post" id="support-form">
-                        <label for="fname">Imię:</label>
-                        <input type="text" id="fname" name="fname" required>
-        
-                        <label for="lname">Nazwisko:</label>
-                        <input type="text" id="lname" name="lname" required>
-        
-                        <label for="subject">Temat:</label>
-                        <input type="text" id="subject" name="subject" required>
-        
-                        <label for="issue">Opis problemu:</label>
-                        <textarea id="issue" name="issue" rows="6" required></textarea>
-        
+
+                        <input placeholder="Imię:" type="text" id="fname" name="fname" required>
+                        <input placeholder="Nazwisko:" type="text" id="lname" name="lname" required>
+                        <input placeholder="Temat:" type="text" id="subject" name="subject" required>
+                        <textarea placeholder="Opis problemu:" id="issue" name="issue" rows="6" required></textarea>
+
                         <button type="submit" class="send-btn">Wyślij</button>
                     </form>
                 </div>
