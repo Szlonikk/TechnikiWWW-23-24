@@ -1,23 +1,22 @@
-/* Resetowanie marginesów i paddingów dla wszystkich elementów */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Styl dla głównego kontenera */
+
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Ustawia główny kontener na całą wysokość widoku */
+
 }
 
-/* Styl dla kontenera formularza */
+
 .form-container {
     margin-top: 20px;
-    /* Dodałem margines na górę, aby oddzielić formularz od gif'a */
+
 }
 
 .img {
@@ -27,7 +26,7 @@
     flex-direction: column;
 }
 
-/* Styl dla formularza */
+
 #support-form {
     display: flex;
     flex-direction: column;
@@ -36,7 +35,7 @@
     margin: 0 auto;
 }
 
-/* Styl dla pól tekstowych */
+
 input[type="text"],
 textarea {
     width: 100%;
@@ -55,7 +54,7 @@ textarea {
     cursor: pointer;
 }
 
-/* Dodałem prosty hover na przycisku */
+
 .send-btn:hover {
     background-color: #45a049;
 }

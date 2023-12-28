@@ -1,6 +1,5 @@
 :root {
     --color-primary: #6C9BCF;
-    --color-danger: #FF0060;
     --color-success: #1B9C85;
     --color-warning: #F7D060;
     --color-white: #fff;
@@ -30,50 +29,22 @@
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    margin-top: 50px;
 }
 
-input {
-    color: var(--color-dark);
-    background-color: var(--color-light);
-}
-
-.avatar-section {
-    margin-bottom: 20px;
-}
-
-.avatar-container {
-    margin-top: 2rem;
-    width: 600px;
-    height: 600px;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
-
-.avatar-container img {
+.section-title {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 100%;
-}
-
-.input-section {
+    background-color: var(--color-white);
+    color: var(--color-info-dark);
     text-align: center;
-}
-
-.input-section input {
-
-    width: 80%;
     padding: 10px;
-    margin: 10px 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.avatar-hello {
-    font-weight: 800;
-    font-size: 1.8rem;
+.main-text {
+    width: 100%;
 }

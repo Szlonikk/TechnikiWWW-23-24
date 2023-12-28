@@ -17,16 +17,16 @@ closeBtn.addEventListener('click', () => {
 
 const checkScreenWidth = () => {
     if (window.innerWidth > 1000) {
-        sideMenu.style.display = 'block'; // lub inny styl, który ma być ustawiony
+        sideMenu.style.display = 'block';
     } else {
         sideMenu.style.display = 'none';
     }
 };
 
-// Wywołaj funkcję, aby sprawdzić szerokość ekranu na początku
+
 checkScreenWidth();
 
-// Dodaj nasłuchiwanie na zdarzenie zmiany szerokości ekranu
+
 window.addEventListener('resize', checkScreenWidth);
 
 closeBtn.addEventListener('click', () => {
@@ -42,31 +42,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 var mojeKontoLink = document.getElementById('myProfileOption');
-    mojeKontoLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        window.location.href = 'moje_konto.html';
-    });
+mojeKontoLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.location.href = 'moje_konto.html';
+});
 
 var mojeKontoLink = document.getElementById('supportPageOption');
-    mojeKontoLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        window.location.href = 'wsparcie.html';
-    });
+mojeKontoLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.location.href = 'wsparcie.html';
+});
 var mojeKontoLink = document.getElementById('aboutPageOption');
-    mojeKontoLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        window.location.href = 'o_nas.html';
-    });    
-    
+mojeKontoLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.location.href = 'o_nas.html';
+});
+
 var mojeKontoLink = document.getElementById('mainPageOption');
-    mojeKontoLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        window.location.href = 'index.html';
-    });    
-    
-    darkMode.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode-variables');
-        darkMode.querySelector('span:nth-child(1)').classList.toggle('active');
-        darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
-    })
-    
+mojeKontoLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.location.href = 'index.html';
+});
+
+darkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode-variables');
+    darkMode.querySelector('span:nth-child(1)').classList.toggle('active');
+    darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
+})
