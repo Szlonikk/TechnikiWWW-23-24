@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_sup.css">
+
+    <title>Telefoniki.pl</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <div class="sidebar-con">
+            <aside>
+                <div class="toggle">
+                    <div class="logo">
+                        <img src="images/logo.png">
+                        <h2>Telefoniki</h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close
+                        </span>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <a href="#" id="mainPageOption">
+                        <span class="material-icons-sharp">
+                            shopping_cart
+                        </span>
+                        <h3>Smartfony</h3>
+                    </a>
+                    <a href="#" id="myProfileOption">
+                        <span class="material-icons-sharp">
+                            account_circle
+                        </span>
+                        <h3>Moje konto</h3>
+                    </a>
+                    <a href="#" class="active" id="supportPageOption">
+                        <span class="material-icons-sharp">
+                            face
+                        </span>
+                        <h3>Wsparcie</h3>
+                    </a>
+                    <a href="#" id="aboutPageOption">
+                        <span class="material-icons-sharp">
+                            article
+                        </span>
+                        <h3>O nas</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">
+                            login
+                        </span>
+                        <h3>Wyloguj</h3>
+                    </a>
+                </div>
+
+
+            </aside>
+        </div>
+        <!--End of Sidebar-->
+        <!-- Main Content-->
+        <main>
+            <div class="content">
+
+                <h1>Napisz do nas! </h1>
+                <h2>Nie wahaj się</h2>
+                <img src="images/support.gif" alt="Gif" class="gif">
+
+                <!-- Formularz -->
+                <div class="form-container">
+                    <form action="#" method="post" id="support-form">
+
+                        <input placeholder="Imię:" type="text" id="fname" name="fname" required>
+                        <input placeholder="Nazwisko:" type="text" id="lname" name="lname" required>
+                        <input placeholder="Temat:" type="text" id="subject" name="subject" required>
+                        <textarea placeholder="Opis problemu:" id="issue" name="issue" rows="6" required></textarea>
+
+                        <button type="submit" class="send-btn">Wyślij</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hej, <b>Telefoniarz132</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
