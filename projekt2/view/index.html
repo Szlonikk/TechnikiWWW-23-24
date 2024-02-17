@@ -77,8 +77,8 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis erat purus. Proin vehicula quam massa, vel rutrum libero malesuada vel. Nulla dolor sem, finibus eu ullamcorper et, viverra vel arcu. Sed vel imperdiet ante. Quisque sed urna non urna dapibus pretium in a libero. Cras lacus nulla, efficitur vitae cursus ac, aliquam lobortis tortor. Pellentesque laoreet accumsan risus eget maximus. Maecenas hendrerit mi sed nisi lobortis accumsan vitae sed metus. Morbi faucibus porttitor nisi, eget elementum ante. Aliquam erat volutpat. Aliquam finibus enim dolor, ut ornare sapien viverra vel. Aliquam nec urna at augue posuere maximus ut in enim. Sed egestas neque nec pellentesque ornare. Ut ut faucibus arcu. 
                 </div>
                 <div class="button-container">
-                    <button class="button-minus">-</button>
-                    <button class="button-plus">+</button>
+                    <button class="button-minus" id="incrementBtn">-</button>
+                    <button class="button-plus" id="decrementBtn">+</button>
                 </div>
             </div>
             <div class="Telefon-container">
@@ -126,6 +126,33 @@
         </div>>
     </div>
         
+    <script>
+        document.getElementById('incrementBtn').addEventListener('click', function() {
+            fetch('/increment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ id: 1 }), // Przykład, dostosuj id do swoich potrzeb
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        });
+
+        document.getElementById('decrementBtn').addEventListener('click', function() {
+            fetch('/decrement', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ id: 1 }), // Przykład, dostosuj id do swoich potrzeb
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
