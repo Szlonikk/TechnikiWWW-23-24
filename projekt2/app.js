@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
-
-// Serve static files from specified directories
-app.use(express.static('view')); // assuming your CSS and JS files are in a 'public' directory
+app.use(express.static('view'));
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true })); 
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html')); // serve your HTML file
+  res.sendFile(path.join(__dirname, 'index.html')); 
 });
 
 const PORT = process.env.PORT || 3000;
@@ -19,30 +19,42 @@ app.listen(PORT, () => {
 
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'yourUsername',
-    password: 'yourPassword',
-    database: 'yourDatabase'
+    user: 'root',
+    password: '11112222',
+    database: 'telefony',
+    port: 3306               
 });
 
-// connection.connect(error => {
-//     if (error) throw error;
-// //     console.log("Successfully connected to the database.");
-// });
+connection.connect(error => {
+    if (error) throw error;
+        console.log("Successfully connected to the database.");
+});
 
 app.post('/increment', (req, res) => {
-    // Przykładowe zapytanie SQL, dostosuj do swojej tabeli i kolumny
-    const query = "UPDATE yourTable SET yourColumn = yourColumn + 1 WHERE id = ?";
-    connection.query(query, [req.body.id], (error, results) => {
+    
+    const id = req.body.id;
+    const query = "UPDATE telefon SET ilosc = ilosc + 1 WHERE id = ?";
+    connection.query(query, [id], (error, results) => {
         if (error) throw error;
         res.send({ success: true, message: 'Value incremented successfully.' });
     });
 });
 
 app.post('/decrement', (req, res) => {
-    // Przykładowe zapytanie SQL, dostosuj do swojej tabeli i kolumny
-    const query = "UPDATE yourTable SET yourColumn = yourColumn - 1 WHERE id = ?";
-    connection.query(query, [req.body.id], (error, results) => {
-        if (error) throw error;
-        res.send({ success: true, message: 'Value decremented successfully.' });
+    const id = req.body.id;
+    const query = "UPDATE telefon SET ilosc = ilosc - 1 WHERE id = ? AND ilosc > 0";
+
+    connection.query(query, [id], (error, results) => {
+        if (error) {
+            throw error;
+        }
+        if (results.affectedRows === 0) {
+            res.send({ success: false, message: 'Value cannot be decremented below 0 or item not found.' });
+        } else {
+            res.send({ success: true, message: 'Value decremented successfully.' });
+        }
     });
 });
+
+
+

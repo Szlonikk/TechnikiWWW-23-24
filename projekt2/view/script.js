@@ -69,3 +69,56 @@ darkMode.addEventListener('click', () => {
     darkMode.querySelector('span:nth-child(1)').classList.toggle('active');
     darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
 })
+
+
+document.getElementById('incrementBtn').addEventListener('click', function() {
+    fetch('/increment', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: 1 }),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+});
+
+document.getElementById('decrementBtn').addEventListener('click', function() {
+    fetch('/decrement', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: 1 }), 
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+});
+
+document.getElementById('incrementBtn2').addEventListener('click', function() {
+    fetch('/increment', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: 2 }), 
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+});
+
+document.getElementById('decrementBtn2').addEventListener('click', function() {
+    fetch('/decrement', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: 2 }), 
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+});
